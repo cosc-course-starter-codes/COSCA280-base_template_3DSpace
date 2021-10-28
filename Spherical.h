@@ -11,17 +11,13 @@
 //  PHI = 90 is pointing up the Y axis
 //
 //  Angles increase clockwise and vertically
-
+//
+#ifndef _SPHERICAL_H_
+#define _SPHERICAL_H_
 
 
 #include "MathSettings.h"
-
-#pragma once
-#if !defined(_SPHERICAL_H_)
-#define _SPHERICAL_H_
-
 #include "Vector.h"
-
 
 class Spherical
 {
@@ -77,7 +73,6 @@ Spherical operator+(Spherical const &Operand1, Spherical const &Operand2);
 
 // Overloaded "Spherical = Spherical - Spherical" operator (combine).
 Spherical operator-(Spherical const &Operand1, Spherical const &Operand2);
-
 
 
 #endif //_SPHERICAL_H_

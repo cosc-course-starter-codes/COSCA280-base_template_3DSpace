@@ -5,24 +5,14 @@
 //
 // All math files must include this eventually.
 //
-
-
-
-
-
 #ifndef _MATH_SETTINGS_H_
 #define _MATH_SETTINGS_H_
-//#pragma once
 
 // explicit dependencies
 #include <math.h>       // for sqrt
 #include <assert.h>
 //#pragma warning (disable:4244)      // int to float conversion
 #include <float.h>      // for min/max
-
-
-
-
 
 
 /////////////////////////
@@ -39,14 +29,11 @@ class Spherical;
 // Fundamentals of the math objects... //
 /////////////////////////////////////////
 
-
 // real type
 typedef float real;
 
-
 real const REAL_MAX = FLT_MAX;
 real const REAL_MIN = FLT_MIN;
-
 
 real const PI = real( 3.14159265358979323846 );
 real const PIunder360 = real( 114.59155902616464175369272868838 );
@@ -148,13 +135,11 @@ typedef UInt * UInt_PTR;
 #define	BLUE_INDEX				2
 #define	ALPHA_INDEX				3
 
-
 // for XYZW Cartesian vectors
 #define X_AXIS                  0
 #define Y_AXIS                  1
 #define Z_AXIS                  2
 #define W_AXIS                  3
-
 
 #define	REDV		0.8, 0.0, 0.0, 0.0
 #define GREENV		0.0, 0.8, 0.0, 0.0
@@ -173,7 +158,6 @@ typedef UInt * UInt_PTR;
 #define UPV		 0.0,  1.0,  0.0
 #define DOWNV	 0.0, -1.0,  0.0
 
-
 const real ORIGINARRAY[3] = {ORIGINV};
 const real RIGHTARRAY[3] =	{RIGHTV	};
 const real LEFTARRAY[3] =	{LEFTV	};
@@ -182,23 +166,17 @@ const real BACKARRAY[3] =	{BACKV	};
 const real UPARRAY[3] =		{UPV	};
 const real DOWNARRAY[3] =	{DOWNV	};
 
-
-
 // for Spherical coordinates stored in vectors's
 // (distance, theta, phi)
 // distance >= 0.0
 // 0 <= theta < 2PI
 // 0 <= phi < PI
-
 #define SPH_THETA               0
 #define SPH_PHI                 1
 #define SPH_DIST                2
 #define THETA		            SPH_THETA
 #define PHI						SPH_PHI
 #define DIST					SPH_DIST
-
-
-
 
 
 #endif // #ifndef _MATH_SETTINGS_H_

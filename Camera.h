@@ -3,7 +3,8 @@
 // Author: Scott McDermott
 // Date Modified: 10/30/2017
 //
-
+#ifndef _CAMERA_H_
+#define _CAMERA_H_
 
 #if defined __APPLE__
     #include <GLUT/glut.h>
@@ -15,10 +16,6 @@
 
 #include "Vector.h"
 #include "Spherical.h"
-
-#pragma once
-#if !defined(_CAMERA_H_)
-#define _CAMERA_H_
 
 // Projection type is either orthographic(parallel) or perspective.
 enum Camera3DProjType { CAM_PROJ_ORTHO, CAM_PROJ_PERSPECTIVE };
@@ -90,7 +87,7 @@ public:
 	inline void moveDown(real units = 1.0f) {moveUp(-units);}
 	
 protected:
-	// Flag indicating if any calulated variables are not updated.
+	// Flag indicating if any calculated variables are not updated.
 	// These include UVN vectors, psAimPoint, and any sound calculation.
 	// Any change to the position, aim point/direction, or up direction will
 	// invalidate them all.
@@ -100,7 +97,7 @@ protected:
 //	real eyeheight;
 
 /////////////////////////////////////////////////////
-//            Specified Camera vaiables            //
+//            Specified Camera variables           //
 /////////////////////////////////////////////////////
 
 	// Parallel or perspective projection.
@@ -146,7 +143,7 @@ public:
 	// Update the various calculated camera variables.
 	void update();
 
-	// Force the update of all of the calulated variales.
+	// Force the update of all of the calculated variales.
 	inline void forceUpdate() {calculationsUpToDate = false; update();}
 
 };

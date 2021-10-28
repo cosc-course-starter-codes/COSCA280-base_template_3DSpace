@@ -3,16 +3,13 @@
 // Author: Scott McDermott
 // Date Modified: 10/30/2017
 //
-
+#ifndef _VECTOR_H_
+#define _VECTOR_H_
 
 
 #include "MathSettings.h"
 
-#pragma once
-#if !defined(_VECTOR_H_)
-#define _VECTOR_H_
-
-class Spherical;
+class Spherical;  // this is just a placeholder...
 
 
 class Vector
